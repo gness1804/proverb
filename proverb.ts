@@ -1,5 +1,5 @@
 export function proverb(...args: string[]): string {
-  const res = args.reduce((acc: string, curr: string, index: number) => {
+  return args.reduce((acc: string, curr: string, index: number) => {
     if (index === args.length - 1) {
       acc += `And all for the want of a ${args[0]}.`;
     } else {
@@ -7,5 +7,4 @@ export function proverb(...args: string[]): string {
     }
     return acc;
   }, '');
-  return res;
 }
